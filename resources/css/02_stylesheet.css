@@ -1,0 +1,138 @@
+/* CSS 영역 : 스타일 정보 기입 */
+
+/* 1 속성선택자 */
+/* div 들 중 name 속성값이 name1과 "일치" 하는 요소 */
+div[name=name1] {
+    background-color: orangered;
+}
+
+/* div 들 중 name 속성값에 name 이 "단어로써 포함" 된 요소 */
+div[name~=name1] {
+    background-color: yellow;
+}
+
+/* div 들 중 class 속성값이 div 로 "- 앞에 한 단어로써 시작" 하는 요소 */
+div[class|=div] {
+    background-color: cyan;
+}
+
+/* div 들 중 name 속성값이 na 로 "시작" 되는 요소 */
+div[name^=na]{
+    background-color: blue;
+}
+
+/* div 들 중 class 속성값이 ss 로 "끝" 나는 요소 */
+div[class$=ss]{
+    color : white;
+}
+
+/* div 들 중 class 속성값에 i 가 "포함" 되어있는 요소 */
+div[class*=i]{
+    background-color: yellow;
+    color: red;
+}
+
+/*
+    응용 : class 속성값이 div-class 인 요소들 중
+           name 속성값에 name3 이 단어로써 포함되어있는요소
+*/
+.div-class[name~=name3] {
+    background-color: pink;
+}
+
+/* 2. 자손선택장와 후손선택자 */
+/* 2_1. 자손선택자 (a>b : a 요소의 자손들 중 b 요소들만 선택) */
+#test1>h4 {
+    background-color: orangered;
+}
+
+#test1>ul {
+    background-color: cyan;
+}
+
+/* 2_2. 후손선택자 (a b : a 요소의 후손들 중 b 요소들만 선택) */
+#test1 li {
+    color : red
+}
+
+/* 이런 방법도 있음 - 자손선택자를 중첩해서 후손들을 선택할 수 있음*/
+#test1>ul>li {
+    font-size : 20px;
+}
+
+/* 3. 동위선택자 */
+/* 3_1. a+b : 요소 뒤에 있는 b 요소 하나만을 선택 */
+#test2+div{
+    background-color: yellow;
+}
+
+#test2+ul {
+    background-color: yellowgreen;
+}
+/* 바로 뒤의 요소가 ul 이 아니기 때문에 아예 선택조차 안됨!! */
+
+/* 3_2. a~b : a 요소 뒤에 있는 모든 b 요소들 다 선택 */
+#test2~div {
+    /* background-color: green; */
+}
+
+#test2~ul{
+    background-color: deeppink;
+}
+
+/* 4. 반응선택자 */
+.area {
+    background-color: beige;
+    width: 100px;
+    height: 100px;
+}
+
+/* 4_1. 선택자:active (클릭) */
+#active-test:active {
+    background-color: yellow;
+    color: red;
+    cursor: pointer;
+}
+
+/* 4_2. 선택자:hover (마우스 올라감) */
+#hover-test:hover {
+    background-color: maroon;
+    color: white;
+    cursor: pointer;
+}
+
+/* 5. 상태선택자 */
+/* 5_1. 선택자:checked */
+input[type=checkbox]:checked{
+    width: 20px;
+    height: 20px;
+    /* font-size: 20px; */ /* 제대로 반영 안됨 */
+}
+
+/* 체크박스가 체크될 때 글씨 크기도 같이 변경하고싶다면? */
+input[type=checkbox]:checked+label {
+    font-size: 20px;
+}
+/* 동위선택자 응용하기!! */
+
+/* 5_2. 선택자:focus */
+/* input 태그 중 name 속성값이 user 로 시작하는 경우 */
+input[name^=user]:focus {
+    background-color: pink;
+}
+
+/* 5_3. 선택자:enabled, 5_4. 선택자:disabled */
+form>input:enabled {
+    background-color: blue;
+}
+form>input:disabled {
+    background-color: red;
+}
+    
+form>button:enabled{
+    background-color: fuchsia;
+} 
+
+form>button:disabled{
+    background-color: indigo;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 관련 스타일</title>
+    <style>
+        /* list-style-type */
+        #ul1 {
+            list-style-type : square;
+            /* 기본값은 disc */
+        }
+
+        #ol1 {
+            list-style-type: lower-roman;
+            /* 기본값은 decimal */
+        }
+
+        /*
+            list-style-position
+            list-style-image
+        */
+        #ul2 {
+            list-style-position : inside;
+            /* 기본값은 outsize */
+            list-style-image : url("resources/image/iconsample.png");
+        }
+
+        table, th, td{
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        .nav>th+th {
+            background-color: yellow;
+            color: red;
+            width: 150px;
+            font-size: larger;
+        } 
+    </style>
+</head>
+<body>
+    
+    <h1>목록 관련 스타일 속성 (list-~)</h1>
+
+    <h3>
+        list-style-type : 불릿 기호를 변경시켜줄 때 사용
+    </h3>
+
+    <pre>
+        [ 표현법 ]
+
+        * 순서 없는 목록 (ul)
+
+        선택자 {
+            list-style-type : disc/circle/square/none;
+        }
+
+        * 순서 있는 목록 (ol)
+
+        선택자 {
+            list-style-type : decimal/decimal-leading-zero;
+            list-style-type : lower-alpha/upper-alpha;
+            list-style-type : lower-roman/upper-roman;
+        }
+    </pre>
+
+    <h4>순사 없는 목록 (ul)</h4>
+
+    <!-- ul#ul1>li*4 + Enter -->
+    <ul id="ul1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+    </ul>
+
+    <br>
+
+    <h4>순서 있는 목록 (ol)</h4>
+
+    <!-- ol#ol1>li*4 + Enter -->
+    <ol id="ol1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+    </ol>
+    
+    <br><br>
+
+    <hr>
+
+    <h3>
+        list-style-position : 불릿기호의 위치를 조정할 때 사용
+    </h3>
+
+    <h3>
+        list-style-image : 불릿기호를 이미지로 적용할 때 사용
+    </h3>
+
+    <pre>
+        [ 표현법 ]
+
+        선택지 {
+            list-style-position : inside/outside;
+            list-style-image : url("이미지경로");
+        }
+    </pre>
+
+    <h4>KH정보교육원 위치 안내</h4>
+
+    <ul id="ul2">
+        <li>강남점 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F</li>
+        <li>강남점 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F</li>
+        <li>강남점 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F</li>
+        <li>종로점 : 서울특별시 종로구 우정국로2길 21 대왕빌딩 3F, 5F (1호선 종각역 4번 출구 91m 도보 1분 거리)</li>
+        <li>논현점 : 서울특별시 강남구 논현로 132길 9 마루빌딩 1F, 2F, 3F</li>
+        <li>부산점 : 부산 부산진구 중앙대로 627 삼비빌딩 2F, 12F</li>
+    </ul>
+
+    <form action="test">
+        
+        <table id="menu">
+            <caption style="color: green;"><h3>주간메뉴표</h3></caption>
+            <tr style="background-color: green;">
+                <th>구분</th>
+                <th>월(8/21)</th>
+                <th>화(8/22)</th>
+                <th>수(8/23)</th>
+                <th>목(8/24)</th>
+                <th>금(8/25)</th>
+            </tr>
+            <tr class="nav">
+                <th rowspan="3" style="font-size: larger;">중<br>식</th>
+                <th>계란프리타타</th>
+                <th>탕수육</th>
+                <th>제육두루치기</th>
+                <th>훈제오리로스</th>
+                <th>수제돈까스</th>
+            </tr>
+            <tr>
+                <th>
+                    김치 제육볶음<br>
+                    우엉채조림<br>
+                    콩나물무침<br>
+                    열무김치<br>
+                    적채샐러드<br>
+                    배추된장국<br>
+                    햄야채 볶음밥<br>
+                    흰밥 / 잡곡밥
+                </th>
+                <th>
+                    짜장<br>
+                    오이양파초무침<br>
+                    단무지무침<br>
+                    배추겉절이<br>
+                    야채샐러드<br>
+                    콩나물국<br>
+                    계란볶음밥<br>
+                    흰밥 / 잡곡밥
+                </th>
+                <th>
+                    잡채<br>
+                    어묵볶음<br>
+                    치커리무침<br>
+                    열무김치<br>
+                    양상추 샐러드<br>
+                    김치 순두부국<br>
+                    호박 볶음밥<br>
+                    흰밥 / 볶음밥
+                </th>
+                <th>
+                    교자 비빔만두<br>
+                    감자조림<br>
+                    양배추 / 쌈장<br>
+                    배추겉절이<br>
+                    치커리 샐러드<br>
+                    미역국<br>
+                    콘빈스 볶음밥<br>
+                    흰밥 / 잡곡밥
+                </th>
+                <th>
+                    카레라이스<br>
+                    청포묵무침<br>
+                    영양부추 무침<br>
+                    열무김치<br>
+                    비트샐러드<br>
+                    얼갈이 된장국<br>
+                    파프리카 볶음밥<br>
+                    흰밥 / 잡곡밥
+                </th>
+            </tr>
+            <tr style="background-color: purple;">
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+            </tr>
+            <tr style="font-weight: 500;">
+                <td style="width: 60px;" >원산지</td>
+                <td colspan="5">겉절이,깍두기,얼갈이,알타리:국내 김치,고추가루:중국산 쌀:국내산 제육:국내산</td>
+            </tr>
+            <tr>
+                <td colspan="6" style="color: red; font-weight: bold;">※ 주간메뉴는 식당 사정에 따라 변동될 수 있음을 알려드립니다.</td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
