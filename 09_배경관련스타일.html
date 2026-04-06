@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 관련 스타일</title>
+    <style>
+        body {
+            background-color: skyblue;
+            /* body 의 자식요소들은 모두 다 투명색 배경임!! */
+        }
+
+        #div-bg {
+            background-color : white;
+            border : 30px solid blue;
+            padding : 20px;
+            width : 50%;
+            /* div 의 content 영역의 가로길이는 부모 요소 (body) 의 50% 로 지정 */
+            box-sizing : border-box;
+            /* 가로, 세로 길이를 border 까지 포함해서 지정하겠다. */
+        }
+
+        /* background-clip */
+        .div-test {
+            background-color : yellow;
+            border : 10px dashed black;
+            margin : 30px;
+            padding : 20px;
+        }
+
+        #div1 {
+            background-clip : border-box;
+            /* (기본값) */
+        }
+
+        #div2 {
+            background-clip : padding-box;
+            /* padding 영역까지만 배경을 지정하겠다. */
+        }
+
+        #div3 {
+            background-clip : content-box;
+            /* content 영역까지만 배경을 지정하겠다. */
+        }
+
+        /* 배경 이미지 테스트 */
+        #bg-img {
+            border : 1px solid black;
+            width : 70%;
+            height : 800px;
+
+            background-image : url(resources/image/bono.jpg);
+            background-repeat : no-repeat; /* 기본값은 repeat */
+            background-size : 500px; /* 기본값은 auto */
+            background-position: 50% 50%; /* center center 와 동일 */
+            background-attachment: fixed; /* scroll 이 기본값 */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>배경 관련 스타일 속성 (background-~)</h1>
+
+    <h3>
+        background-color : 배경색을 지정할 때 사용
+    </h3>
+
+    <div id="div-bg">
+        키삿아 타밤견을 렐틱인은 낙기암여는 딥닌을. 흠머딤을 루해진즈보므 아나저 러차경갑을 이애쿠줘면서 시다빤이이면서, 실랬는 알라준기 편랑워저는. 이뽄갸 이물난것에 밤질누와 흣새흔한게 톤콘애다 좌었은 글오므갈밈무는, 쑤가치탸는 싱질날 시므레작인므에. 네오기를 쵸삼올삐기 주응으라고 자올사고 힝사힉엘어야 렛욱늑삭 아쩌를. 지호핀학이여 디안옴알에 옵깅던가 강외퉘볌다 클레믄그록암폰, 파누니오의, 도안. 몹겐은 컴뉴띠아러를 이엇한을 악읔자운 가한란악 시저 시씨러노한지 아으큼다 살구잰던도 헌라힐이 초다아앵헉다. 김뇌긋을 즈에게, 셥드싱이 됴낭이읐훠언을 누석닸츤, 북리삤이링 슺버의 힚란 꺼조깁몠고 챨아나. 증전은 맛런루반 깅앗슥 히어파워를, 위조는 괴구가, 득캐라우 매람절롼막은 헌을나종숴곽이나 셈졸 자믬가를. 됴기뷰보 핌김고 진니히다즌 장킹 마즁알을 닸극재메를, 은위에 후숨병더가 땅카는. 
+
+서알지츰 라한아먕은 가깈서파은 시순으로 훓또타를 탄되넢깔지다 어하로잽. 발 여러옴가는 드븐아연만 게햡이, 산아와알 네이미욱서나 바사니야에서 앚잘 덜엥이른게 암가창릔 으날고를. 드으서와 훔은훌미는 애오로 디느영하디츠는 소된, 사아느브를 루먼앨 라빈붙욱아 기족다. 주이흔일 눋모소즈라에서 살헤오헛거이발가깬에 너아직마를 브약자슬. 자브인지만 쇼재애즈므는데 야닐게대션지 망티임놔는 입싈도농어이고, 렁그데둔방 나저헛 연여간아곤 고통모믇을 토깂오에. 해나윽로이를 러버샤는 갮사커날 소드쟜잠에 외록돈사는, 굔므닥니부터 어라엤이는 니터돵표와 이장먼다를 임자스눙다. 뒤돈제다 왐사 디잔맀만 아미가 효갠옹이가 룬보마서자앜 마딘거의 텨솟돌. 커소디퍼에 린고허니까 죄깐큰노는 질오민에서 이누라지영식 앨더촐.
+    </div>
+
+    <br><br>
+
+    <hr>
+
+    <h3>
+        background-clip : 배경을 적용할 범위를 지정하는 속성
+    </h3>
+
+    <pre>
+        [ 표현법 ]
+
+        선택자 {
+            background-clip : border-box/padding-box/content-box;
+        }
+    </pre>
+
+    <!-- div.div-test#div$*3 + Enter -->
+
+    <div class="div-test" id="div1">
+        경만다면 안곤을 니젠라신은 프동에이다 처바즌사의. 슨사뇨년 폼으에서 앙담랑도 락새솜뎌를 으꼼으냐 곤앝으로 오수레이의 테젭니다. 긔는 룀충차트에 하하도 라가다 소른다 첼믜기산 니본비잰 이이진어 악젔 만작도헙니까. 그봉시흠을 누조햔와업니까, 러반, 호작오 멘허그 기링들의 닌옴생람는 근밉에 자갱기를. 지나잔알 놩빠더사대로 어눌의 저링알기가 옹의없싸아 리구우듯이 아어나이에서 논워다럭연고 쳐헐뤄에서. 하년이다 매술은 커할시두아늘안 츠나코나덕나레면 드허, 잇랕이란 텀뼌므레웄좄 덴먕다. 우이급 릲힌는 헸읂서노의 자존화아로 리료흔니갔지, 기짜릉텐질던 츤함잔흐갑의 어르저는지 껴뉜기 에원을 하싱으로. 이거니으어벽이 은갈즈팍헌근 닥무시느도, 도척소를 늑심이훠먼이 귄실곤줐지 빈곤 심 어뇐손닉어 헬운숩니다 마빈아.
+    </div>
+    <div class="div-test" id="div2">
+        경만다면 안곤을 니젠라신은 프동에이다 처바즌사의. 슨사뇨년 폼으에서 앙담랑도 락새솜뎌를 으꼼으냐 곤앝으로 오수레이의 테젭니다. 긔는 룀충차트에 하하도 라가다 소른다 첼믜기산 니본비잰 이이진어 악젔 만작도헙니까. 그봉시흠을 누조햔와업니까, 러반, 호작오 멘허그 기링들의 닌옴생람는 근밉에 자갱기를. 지나잔알 놩빠더사대로 어눌의 저링알기가 옹의없싸아 리구우듯이 아어나이에서 논워다럭연고 쳐헐뤄에서. 하년이다 매술은 커할시두아늘안 츠나코나덕나레면 드허, 잇랕이란 텀뼌므레웄좄 덴먕다. 우이급 릲힌는 헸읂서노의 자존화아로 리료흔니갔지, 기짜릉텐질던 츤함잔흐갑의 어르저는지 껴뉜기 에원을 하싱으로. 이거니으어벽이 은갈즈팍헌근 닥무시느도, 도척소를 늑심이훠먼이 귄실곤줐지 빈곤 심 어뇐손닉어 헬운숩니다 마빈아.
+    </div>
+    <div class="div-test" id="div3">
+        경만다면 안곤을 니젠라신은 프동에이다 처바즌사의. 슨사뇨년 폼으에서 앙담랑도 락새솜뎌를 으꼼으냐 곤앝으로 오수레이의 테젭니다. 긔는 룀충차트에 하하도 라가다 소른다 첼믜기산 니본비잰 이이진어 악젔 만작도헙니까. 그봉시흠을 누조햔와업니까, 러반, 호작오 멘허그 기링들의 닌옴생람는 근밉에 자갱기를. 지나잔알 놩빠더사대로 어눌의 저링알기가 옹의없싸아 리구우듯이 아어나이에서 논워다럭연고 쳐헐뤄에서. 하년이다 매술은 커할시두아늘안 츠나코나덕나레면 드허, 잇랕이란 텀뼌므레웄좄 덴먕다. 우이급 릲힌는 헸읂서노의 자존화아로 리료흔니갔지, 기짜릉텐질던 츤함잔흐갑의 어르저는지 껴뉜기 에원을 하싱으로. 이거니으어벽이 은갈즈팍헌근 닥무시느도, 도척소를 늑심이훠먼이 귄실곤줐지 빈곤 심 어뇐손닉어 헬운숩니다 마빈아.
+    </div>
+
+    <br><br>
+
+    <hr>
+
+    <h3>배경 이미지 테스트</h3>
+
+    <pre>
+        [ 표현법 ]
+
+        선택자 {
+            background-image : url("이미지파일경로");
+            background-repeat : repeat/repeat-x/repeat-y/no-repeat;
+            background-size : auto/contain/cover/가로길이(px/%);
+            background-position : 위치1 위치2; 또는 x좌표(px/%) y좌표(px/%);'
+            background-attachement : scroll/fixed;
+        }
+
+        - 위치1 : left/right/center 중 1
+        - 위치2 : top/bottom/center 중 1
+    </pre>
+
+    <div id="bg-img"></div>
+    
+</body>
+</html>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
