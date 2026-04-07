@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면구조잡기 실습</title>
+    <style>
+        /* div 공통스타일 */
+        div {
+            border : 1px solid red;
+            box-sizing : border-box;
+        }
+
+        /* 전체를 감싸는 wrap */        
+        .wrap {
+            width : 1000px;
+            height : 800px;
+            margin : auto;
+        }
+        
+        /* 크게 세가지 영역 */
+        /* header, content, footer 영역 */
+        .wrap>div {
+            width : 100%;
+        }
+
+        #header, #footer{
+            height : 20%;
+        }
+        #content {
+            height : 60%;
+        }
+
+        /* header 세부 영역 */
+        /* header_1, header_2 영역 */
+        /* content 세부 영역 */
+        /* content_1, content_2, content_3 영역 */
+        /* 이 다섯개의 영역에 대한 공통스타일 */
+        #header>div, #content>div {
+            height : 100%;
+            float : left;
+        }
+
+        #header_1 {
+            width : 30%;
+        }
+        #header_2 {
+            width : 70%;
+        }
+
+        /* content 세부 영역 */
+        /* content_1, content_2, content_3 영역 */
+        /*
+        #content>div {
+            height: 100%;
+            float: left;
+        }
+        */
+        #content_1 {
+            width : 15%;
+        }
+        #content_2 {
+            width : 65%;
+        }
+        #content_3 {
+            width: 20%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div id="header">
+            <div id="header_1"></div>
+            <div id="header_2"></div>
+        </div>
+        <div id="content">
+            <div id="content_1"></div>
+            <div id="content_2"></div>
+            <div id="content_3"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+
+</body>
+</html>

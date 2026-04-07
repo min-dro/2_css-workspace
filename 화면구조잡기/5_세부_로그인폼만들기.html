@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세부_로그인폼 만들기</title>
+    <style>
+        /* div, form 공통스타일 */
+        div, form {
+            /* border : 1px solid red; */
+            box-sizing : border-box;
+        }
+
+        /* 작업을 위한 임시스타일 */
+        #content_3 {
+            width : 300px;
+            height : 600px;
+        }
+
+        /* 전체 로그인 폼을 감싸는 login_form 영역 */
+        #login_form {
+            width : 100%;
+            height : 30%;
+        }
+
+        /* login_form 상세 영역 */
+        /* login_form_input, login_form_etc 영역 */
+        /* 공통스타일 부여 */
+        #login_form>* {
+            width : 100%;
+        }
+
+        /* 각각의 스타일 부여 */
+        #login_form_input {
+            height: 80%;
+        }
+        #login_form_etc {
+            height: 20%;
+            text-align: center;
+        }
+
+        /* login_form_input 상세 영역 */
+        /* login_form_id_pwd, login_input_btn */
+        /* 공통스타일 부여 */
+        #login_form_input>* {
+            height: 100%;
+            float: left;
+        }
+
+        /* 각각의 스타일 부여 */
+        #login_form_input_id_pwd {
+            width: 65%;
+        }
+        #login_input_btn{
+            width: 35%;
+        }
+
+        /* login_input_id_pwd 상세 스타일 */
+        /* input 요소 두개 (아이디, 비번 입력용) */
+        #login_form_input_id_pwd>input {
+            width: 100%;
+            height: 50%;
+            box-sizing: border-box;
+            /* 입력창 또한 테두리를 포함한 크기로 지정 */
+        }
+
+        /* login_input_btn 상세 스타일 */
+        /* input 요소 한개 (로그인 버튼용) */
+        #login_input_btn>input {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* login_form_etc 상세 스타일 */
+        /* a 요소 두개 */
+        #login_form_etc>a{
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            margin: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="content_3">
+        <!-- 1. 전체 로그인 폼을 감싸는 div -->
+        <div id="login_form">
+            <!-- 2_1. 입력을 받는 input 요소들이 위치할 form 영역 -->
+            <form id="login_form_input" action="member/login" method="post">
+                <!-- 3_1. 왼쪽 : 아이디와 비번을 입력받을 text 영역 -->
+                <div id="login_form_input_id_pwd">
+                    <input type="text" name="userId"
+                           placeholder="아이디"  required> <br>
+                    <input type="password" name="userPwd"
+                           placeholder="비밀번호" required>
+                </div>
+                <!-- 3_2. 오른쪽 : 로그인버튼을 위치시킬 button 영역 -->
+                <div id="login_input_btn">
+                    <input type="button" value="로그인">
+                </div>
+            </form>
+            <!--
+                이 영역에 담겨있을 내용물이 입력양식 관련 태그들이라서
+                블록요소인 form 태그로 영역을 나누어 본 것!!
+            -->
+
+            <!-- 2_2. 회원가입, ID/PWD 찾기 페이지 요청 a 태그들이 위치할 div 영역 -->
+            <div id="login_form_etc">
+                <a href="">회원가입</a>
+                <a href="">ID/PWD 찾기</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

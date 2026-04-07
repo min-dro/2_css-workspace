@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세부_푸터만들기</title>
+    <style>
+        /* div 공통스타일 */
+        div {
+            /* border : 1px solid red; */
+            box-sizing : border-box;
+        }
+
+        /*
+            작업을 위한 임시스타일
+            아까 만들었던 3_화면구조잡기상세구조.html 의 footer 를 나타나게끔
+        */
+        #footer {
+            width : 1000px;
+            height: 150px;
+        }
+
+        /* footer 상세 영역 *
+        /* fotter_1, footer_2 */
+        /* 공통스타일 부여 */
+        #footer>div {
+            width : 100%
+        }
+
+        /* 각각의 스타일 부여  */
+        #footer_1 {
+            height : 20%;
+        }
+        #footer_2 {
+            height : 80%;
+        }
+
+        /* footer_2 상세 영역 */
+        /* p1, p2*/
+        /* 공통스타일 부여 */
+        #footer_2>p {
+            /* border : 1px solid blue; */
+            margin : 0px;
+            /*
+                p 요소는 기본적으로 위, 아래 margin 을 갖고있음!!
+                margin 을 없애서 부모 요소 안쩍으로 넣어버리기
+            */
+            font-size : 12px;
+            box-sizing: border-box;
+            width : 100%;
+        }
+
+        /* 각각의 스타일 부여 */
+        #p1 {
+            height : 80%;
+            padding: 5px 15px;
+            /*
+                테두리와 글자 사이 간격이 너무 촘촘함!!
+                padding 으로 안쪽 여백 부여
+            */
+        }
+        #p2 {
+            height : 20%;
+            text-align: center;
+        }
+
+        /* footer_1 상세 영역 다듬기 */
+        /* a 요소들 */
+        #footer_1>a{
+            text-decoration : none;
+            color : black;
+            font-weight : 570;
+            margin : 15px;
+            vertical-align : middle;
+            /*
+                미세하게 위쪽으로 글자들이 뜰려있었음!!
+                수직 구조에서 가운데로 오게끔 효과 추가
+            */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="footer">
+        <div id="footer_1">
+            <a href="">이용약관</a> |
+            <a href="">개인정보처리방법</a> |
+            <a href="">인재 채용 문의</a>|
+            <a href="">고객센터</a>
+        </div>
+        <div id="footer_2">
+            <p id="p1">
+                강남점 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
+                강남점 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                종로점 : 서울특별시 종로구 우정국로2길 21 대왕빌딩 3F, 5F (1호선 종각역 4번 출구 91m 도보 1분 거리) <br>
+                논현점 : 서울특별시 강남구 논현로 132길 9 마루빌딩 1F, 2F, 3F <br>
+                부산점 : 부산 부산진구 중앙대로 627 삼비빌딩 2F, 12F
+            </p>
+            <p id="p2">
+                Copyright © 1998-2026 KH Information Educational Institute All Right Reserved
+            </p>
+            <!-- p 또한 블록요소라 영역을 나눌 때 사용 가능 -->
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세부_메뉴바만들기</title>
+    <style>
+        /* div 공통스타일 */
+        div {
+            /* border : 1px solid red; */ 
+            box-sizing : border-box;
+        }
+
+        /* 작업용 임시스타일 */
+        #navigator {
+            width : 1000px;
+            height : 40px;
+        }
+
+        /* 메인메뉴를 나타내는 ul 영역 */
+        #navi {
+            /* border : 1px solid blue; */
+            margin : 0px;
+            /*
+                p 태그와 마찬가지로 ul 태그 또한
+                기본적으로 위, 아래에 margin 이 존재한다!!
+                margin 을 없애줬음
+            */
+            padding : 0px;
+            /*
+                ul 태그는 기본적으로 왼쪽 padding 또한 갖고있음!!
+                padding 을 없애줬음
+            */
+            list-style-type : none;
+            height : 100%;
+            box-sizing : border-box;
+        }
+
+        /* 메인메뉴 항목을 나타내는 각각의 li */
+        #navi>li {
+            /* border : 1px solid green; */
+            width : 15%;
+            height : 100%;
+            float : left;
+            text-align : center;
+        }
+
+        /* 서브메뉴를 나타내는 ul 영역 */
+        #navi>li>ul {
+            /*border : 1px solid orange; */
+            padding: 0px;
+            list-style-type: none;
+            display: none;
+            /*
+                서브메뉴는 평소에는 눈에 안보이다가
+                사용자가 메인메뉴에 마우스를 올렸을 때만 보여짐
+                서브메뉴를 숨김처리 해줘야함!!
+                (단, 숨기되 자리는 차지라지 않게끔)
+            */
+        }
+
+        /* 
+            메인메뉴 항목을 나타내는 a 요소에 마우스가 올라가는 순간
+            해당 서브메뉴가 나타나게끔 효과 부여
+        */
+        #navi>li>a:hover+ul {
+            display: block;
+            /*
+                ul 은 블록요소이므로
+                display : block 으로 노출시키기!!
+            */
+        }
+
+        /*
+            서브메뉴에도 마우스가 올라갔을 때
+            유지가 되게끔 해줘야 함!!
+        */
+        #navi>li>ul:hover {
+            display: block;
+        }
+
+        /* 메인, 서브 메뉴들의 a 태그 */
+        #navi a {
+            /* border : 1px solid purple; */
+            text-decoration: none;
+            color: lightcoral;
+            font-size: 13px;
+            font-weight: 760;
+            width : 100%;
+            height : 100%;
+            display : block;
+            /*
+                대부분의 인라인요소들은 width, height 속성이 적용되지 않음!!
+                a 요소를 width, height 속성이 적용되게끔 블록요소화 시켜줘야함!!
+            */
+            /* vertical-align: middle; */
+            /*
+                디스플레이로 인해 속성이 무시됩니다.
+                'display: block' 에서 세로 맞춤을 사용할 수 없습니다.
+
+                vertical-align 속성은 인라인요소들에세만 먹히는 속성임!!
+                우리는 a 요소를 방금 display : block 으로 블록 요소로 바꿔줬기 때문에
+                적용이 안되는 것임!!
+                
+                만약, 블록요소 내에서 텍스트를 수직 구조에서 가운데 배치를 하고싶다면,
+                line-height 속성을 이용해야 한다!!
+            */
+            line-height: 35px;
+            /*
+                보통은 해당 요소의 height 값과 line-height 값을 동일하게 맞춰준다
+                동일하게 맞춰주면 정확하게 수직에서
+                (지금은 a 요소가 % - 가변단위로 크기가 지정되었기 때문에)
+                 요소의 절대적인 세로길이를 알아낼 수 없어서 임의로 35px 정도 준 것)
+            */
+        }
+
+        /* 메뉴 텍스트 효과 간단히 부여 */
+        #navi a:hover {
+            color : crimson;
+            font-size : 14px
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="navigator">
+        <!-- 메인메뉴를 나타내는 ul 영역  -->
+        <ul id="navi">
+            <li><a href="">Java</a></li>
+            <li><a href="">Oracle</a></li>
+            <li>
+                <a href="">Front-end</a>
+                <ul>
+                    <li><a href="">HTML</a></li>
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">JavaScript</a></li>
+                    <li><a href="">jQuery</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Server</a>
+                <ul>
+                    <li><a href="">JDBC</a></li>
+                    <li><a href="">Servlet</a></li>
+                    <li><a href="">JSP</a></li>
+                    <li><a href="">Ajax</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Framework</a>
+                <ul>
+                    <li><a href="">MyBatis</a></li>
+                    <li><a href="">Spring</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
