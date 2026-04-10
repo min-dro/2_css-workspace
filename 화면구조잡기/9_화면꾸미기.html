@@ -6,8 +6,8 @@
     <title>통신병의 모든것</title>
     <style>
         /* div, form 공통스타일 */
-        div {
-            /* border : 1px solid red; */
+        div, li {
+            /* border : 1px solid red;  */
             box-sizing : border-box;
         }
 
@@ -65,6 +65,7 @@
             width : 60%;
         }
         #content_3 {
+            padding-top: 100px;
             width: 25%;
         }
 
@@ -280,7 +281,8 @@
         /* 메인메뉴 항목을 나타내는 각각의 li */
         #navi>li {
             /* border : 1px solid green; */
-            width : 15%;
+            background-color: #2E5E3E;
+            width : 16.667%;
             height : 100%;
             float : left;
             text-align : center;
@@ -322,14 +324,15 @@
 
         /* 메인, 서브 메뉴들의 a 태그 */
         #navi a {
-            /* border : 1px solid purple; */
+            border : 1px solid black;
             text-decoration: none;
-            color: lightcoral;
-            font-size: 13px;
-            font-weight: 760;
+            color: #4CAF50;
+            font-size: 15px;
+            font-weight: bolder;
             width : 100%;
             height : 100%;
             display : block;
+            box-sizing : border-box;
             /*
                 대부분의 인라인요소들은 width, height 속성이 적용되지 않음!!
                 a 요소를 width, height 속성이 적용되게끔 블록요소화 시켜줘야함!!
@@ -386,13 +389,13 @@
 
         /* header_1 영역 시작 ----- */
 
-        #header_1 {
+        #header_1, #content_2 {
             position : relative;
             /* 부모요소를 기준점으로 지정 */
         }
 
         #logo {
-            width: 170px;
+            width: 150px;
             position : absolute;
             /* 절대위치로 움직이게끔 지정 */
             top : 0px;
@@ -402,6 +405,22 @@
             /* 상하좌우에서 똑같이 0px 로 잡아당기기 */
             margin: auto;
             /* margin : auto 로 마무리 */
+        }
+
+        #ad {
+            width: 100%;
+            margin-top: 50px ;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        #youtube {
+            position: absolute;
+            width: 90%;
+            right: 0px;
+            left: 0px;
+            margin: auto;
         }
 
         /* header_1 영역 끝 ----- */
@@ -431,7 +450,7 @@
                 <form id="search_form" action="search" method="get">
                     <!-- 왼쪽 : 검색어를 입력할 부분 -->
                     <div id="search_text">
-                        <input type="search" name="keyword">
+                        <input type="search" name="keyword" placeholder="통신병에 대해 궁금한 것을 적어주세요!">
                     </div>
                     <!-- 오른쪽 : 검색어를 입력할 부분 -->
                     <div id="search_btn">
@@ -471,11 +490,19 @@
                         <li><a href="">Spring</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="">인수인계장(커뮤니티)</a>
+                </li>
             </ul>
         </div> <!-- 메뉴바 -->
         <div id="content">
-            <div id="content_1"></div>
-            <div id="content_2"></div>
+            <div id="content_1">
+                <img src="../resources/image/광고.png" id="ad">
+            </div>
+            <div id="content_2">
+                <h1 style="text-align: center; margin: 30px;">통신병 소개 영상</h1>
+                <iframe width="594" height="315" src="https://www.youtube.com/embed/NDn1XJnmbOg?si=hXoD6wGjjKH-Xdmb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="youtube"></iframe>
+            </div>
             <div id="content_3">
                 <!-- 1. 전체 로그인 폼을 감싸는 div -->
                 <div id="login_form">
