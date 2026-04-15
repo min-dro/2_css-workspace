@@ -6,31 +6,31 @@
     <title>선택자 우선순위</title>
     <style>
         h1 {
-            background-color: pink;
-            color: yellow;
+            background-color : pink;
+            color : yellow;
         }
         h1 {
-            color: red;
-            border: 1px solid red;
+            color : red;
+            border : 1px solid red;
         }
         /* 기본적으로 위에서부터 아래로 적용, 겹치지 않으면 각각 반영됨 */
 
         /* 우선순위 테스트 */
         #id1 {
-            background-color: pink;
+            background-color : pink;
         }
 
         .class1 {
-            background-color: yellowgreen;
+            background-color : yellowgreen;
             font-size : 20px;
-            color: white;
+            color : white;
         }
 
         div {
-            background-color: teal !important;
+            background-color : teal !important;
             color : red !important;
             width : 200px;
-            height : 200px
+            height : 200px;
         }
     </style>
 </head>
@@ -48,15 +48,15 @@
     <pre>
         * 우선순위
 
-        태그선택자 -> 클래스선택자 -> 아이디선택자 -> 인라인스타일방식 -> !important
-        낮음                                                              높음
+        태그선태자 -> 클래스선택자 -> 아이디선택자 -> 인라인스타일방식 -> !important
+        낮음                                                            높음
     </pre>
 
     <div id="id1" class="class1"
-         style="background-color: purple; color: pink;">
+         style="background-color : purple; color : pink;">
         우선순위 테스트
     </div>
 
-    
+
 </body>
 </html>

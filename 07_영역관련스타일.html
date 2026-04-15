@@ -33,7 +33,7 @@
                 (각각 top - right - bottom - left 순서)
             */
 
-            /* padding: 50px 20px; */
+            /* padding : 50px 20px; */
             /*
                 각각 위아래, 양옆 순서대로 패딩값 지정
                 (각각 top, bottom - left, right 순서)
@@ -50,123 +50,123 @@
         }
         #test6 {
             /* margin : 50px 30px 20px 0px; */
-            /*
-                마찬가지로 12 시 방향부터 시계방향으로
+            /* 
+                마찬가지로 12 시 방향부터 시계방향으로 
                 각각 다른 margin 값 부여 가능!!
             */
 
-            /* margin: 50px 100px; */
+            /* margin : 50px 100px; */
             /* 마찬가지로 상하 - 좌우 로 묶어서 마진값 부여 가능!! */
 
-            margin: auto;
+            margin : auto;
             /* 화면 크기가 변할 때 좌우 간격을 자동으로 가운데로 맞춰줌 */
         }
     </style>
 </head>
 <body>
     
-        <h1>여백 및 간격 관련 스타일</h1>
+    <h1>여백 및 간격 관련 스타일</h1>
 
-        <!--
-            <시작태그>내용</종료태그> : 요소 (element)
-            <시작태그>, </종료태그> : 태그 (tag)
-            내용 : content 영역
+    <!--
+        <시작태그>내용</종료태그> : 요소 (element)
+        <시작태그>, </종료태그> : 태그 (tag)
+        내용 : content 영역
 
-            요소 영역 = content + padding + border
+        요소 영역 = content + padding + border
 
-            content : 내용이 출력되는 텍스트 영역
-            padding : 안쪽 여백 영역
-            border : 테두리 영역 
-            
-            -------------------------------------------------
+        content : 내용이 출력되는 텍스트 영역
+        padding : 안쪽 여백 영역
+        border : 테두리 영역
 
-            요소의 영역을 나타내는 부분은 아니지만
-            (즉, 요소 영역에 포함되는 부분은 아니지만)
-            요소의 바깥쪽 여백을 나타내는 속성도 있음!!
-            
-            margin : 바깥쪽 여백 영역
-                     요소의 테두리 밖에 여백을 지정하여
-                     다른 요소와의 배치를 나타낼 때 사용 가능하다.
-        -->
+        -----------------------------------------------
 
-        <h4>기준 div</h4>
-
-        <div class="test">기준 div</div>
-
-        <br><br>
-
-        <hr>
-
-        <h3>padding</h3>
-
-        <p>
-            - 내용물 영역 (content) 과 테두리 영역 (border) 사이의 거리 <br>
-            - 즉, 안쪽 여백을 조절하는 스타일 속성
-        </p>
-
-        <br>
+        요소의 영역을 나타내는 부분은 아니지만
+        (즉, 요소 영역에 포함되는 부분은 아니지만)
+        요소의 바깥쪽 여백을 나타내는 속성도 있음!!
         
-        <div class="test" id="test1">컨텐츠 영역</div>
+        margin : 바깥쪽 여백 영역
+                 요소의 테두리 밖에 여백을 지정하여
+                 다른 요소와의 배치를 나타낼 때 사용 가능하다.
+    -->
 
-        <br>
+    <h4>기준 div</h4>
 
-        <b>padding : 100px</b>
+    <div class="test">기준 div</div>
 
-        <br><br>
+    <br><br>
 
-        <div class="test" id="test2">컨텐츠 영역</div>
+    <hr>
 
-        <br>
+    <h3>padding</h3>
 
-        <b>
-            padding-top : 50px;<br>
-            padding-left : 100px;
-        </b>
+    <p>
+        - 내용물 영역 (content) 과 테두리 영역 (border) 사이의 거리 <br>
+        - 즉, 안쪽 여백을 조절하는 스타일 속성
+    </p>
 
-        <br><br>
+    <br>
 
-        <div class="test" id="test3">컨텐츠 영역</div>
+    <div class="test" id="test1">컨텐츠 영역</div>
 
-        <br>
+    <br>
 
-        <b>padding : 50px 20px 10px 0px</b>
+    <b>padding : 100px;</b>
 
-        <br><br>
+    <br><br>
 
-        <hr>
+    <div class="test" id="test2">컨텐츠 영역</div>
 
-        <h3>margin</h3>
+    <br>
 
-        <p>
-            - 타 요소들 간의 간격을 조정할 때 사용
-        </p>
+    <b>
+        padding-top : 50px; <br>
+        padding-left : 100px;
+    </b>
 
-        <br>
+    <br><br>
 
-        <div class="test" id="test4">컨텐츠 영역</div>
+    <div class="test" id="test3">컨텐츠 영역</div>
 
-        <br>
+    <br>
 
-        <b>margin : 50px;</b>
+    <b>padding : 50px 20px 10px 0px;</b>
 
-        <br><br>
+    <br><br>
 
-        <div class="test" id="test5">컨텐츠 영역</div>
+    <hr>
 
-        <br>
+    <h3>margin</h3>
 
-        <b>
-            margin-top : 50px; <br>
-            margin-left : 20px;
-        </b>
+    <p>
+        - 타 요소들 간의 간격을 조정할 때 사용
+    </p>
 
-        <br><br>
+    <br>
 
-        <div class="test" id="test6">컨텐츠 영역</div>
+    <div class="test" id="test4">컨텐츠 영역</div>
 
-        <br>
+    <br>
 
-        <b>margin : 50px 30px 20px 0px;</b>
+    <b>margin : 50px;</b>
+
+    <br><br>
+
+    <div class="test" id="test5">컨텐츠 영역</div>
+
+    <br>
+
+    <b>
+        margin-top : 50px; <br>
+        margin-left : 20px;
+    </b>
+
+    <br><br>
+
+    <div class="test" id="test6">컨텐츠 영역</div>
+
+    <br>
+
+    <b>margin : 50px 30px 20px 0px;</b>
 
 </body>
 </html>

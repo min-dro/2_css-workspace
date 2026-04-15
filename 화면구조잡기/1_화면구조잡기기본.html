@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>화면구조잡기 기본</title>
     <style>
-        /*
-            화면구조잡기 기본이라고 한다면
+        /* 
+            화면구조잡기의 기본이라고 한다면
             항상 바깥쪽에서 안쪽으로 들어가면서 스타일을 하나씩 다듬어야함
         */
 
         /* 영역을 이루고 있는 모든 div 요소를 다 선택해서 공통 스타일 부여 */
         div {
             border : 1px solid red;
-            /* 작업용 가이드 라인 */
+            /* 작업용 가이드라인 */
 
             box-sizing : border-box;
             /*
-                지급부터 지정하는 가로, 세로 길이는 (width, height 속성)
+                지금부터 지정하는 가로, 세로 길이는 (width, height 속성)
                 테두리까지 포함한 길이임을 알려주는 속성!!
 
                 - width, height 속성은 기본적으로 content 영역의 크기를 나타냄!!
@@ -39,9 +39,9 @@
 
         /* 크게 세가지 영역 */
         /* header, content, footer 영역 */
-        /*
-            가능하다면 공통 스타일을 먼저 추려서 한번에 적고
-            세부 스타일을 하나씩 지정해주는 것이 깔끔함
+        /* 
+            가능하다면 공통 스타일을 먼저 추려서 한번에 적고 
+            세부 스타일을 하나씩 지정해주는 것이 깔끔함 
         */
         /* #header, #content, #footer { */
         .wrap>div {
@@ -49,7 +49,7 @@
 
             width : 100%;
         }
-        
+
         #header, #footer {
             height : 20%;
         }

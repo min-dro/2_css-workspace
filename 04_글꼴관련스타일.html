@@ -22,9 +22,9 @@
             /* 앞의 글꼴이 없다면 뒤의 대체 글꼴을 반영해서 스타일 적용 */
         }
 
-        #web-font{
+        #web-font {
             font-family: "East Sea Dokdo", sans-serif;
-            font-size: 30px;
+            font-size : 30px;
         }
 
         /* font-size */
@@ -33,11 +33,11 @@
         }
 
         #fs2 {
-            font-size: 150%;
+            font-size : 150%;
         }
 
         #fs3 {
-            font-size: 2em;
+            font-size : 1.5em;
         }
 
         /* font-weight */
@@ -58,9 +58,9 @@
     </style>
 </head>
 <body>
-    
-    <h1>글꼴 관련 스타일 속성 (font-~)</h1>
 
+    <h1>글꼴 관련 스타일 속성 (font-~)</h1>
+    
     <h3>
         font-family : 글꼴을 지정할 때 사용
     </h3>
@@ -75,7 +75,7 @@
 
     <!--
         * Emmet 문법
-
+    
         - html 태그들을 자동완성 해주는 옵션
     -->
 
@@ -92,10 +92,10 @@
         - 인터넷이 연결된 상황이라면
           굳이 폰트 파일이 없더라도 사용 가능하다. <br>
 
-        웹 폰트 제공 사이트 :
+        웹 폰트 제공 사이트 : 
         <a href="http://fonts.google.com" target="_blank">구글 웹 폰트 사이트</a>
     </p>
-
+    
     <p id="web-font">
         Font Style Test 글꼴 테스트 123 !@#
     </p>
@@ -120,7 +120,7 @@
         - px : 픽셀 (고정크기 단위)
         - % : 비율 (가변크기 단위)
               기본 글꼴 크기의 몇프로
-        - em : 배수 (가변크기 단위)
+        - em : 배수 (가변크기 단위) 
                기본 글꼴 크기의 몇배
     </pre>
 
@@ -140,18 +140,18 @@
     </h3>
 
     <pre>
-            [ 표현법 ]
+        [ 표현법 ]
 
-            선택자 {
-                font-weight : normal/bold/bolder/lighter/100~900
-            }
+        선택자 {
+            font-weight : normal/bold/bolder/lighter/100~900;
+        }
 
-            - normal : 기본 굵기 (기본값)
-            - bold : 굵은 글씨체 (bold체)
-            - bolder : 제일 굵은 옵션
-            - lighter : 제일 가는 옵션
-            - 100 ~ 900 : 숫자가 높을 수록 더 굵어짐
-                          (100 == lighter, 900 = bolder)
+        - normal : 기본 굵기 (기본값) 
+        - bold : 굵은 글씨체 (bold체)
+        - bolder : 제일 굵은 옵션
+        - lighter : 제일 가는 옵션
+        - 100 ~ 900 : 숫자가 높을 수록 더 굵어짐
+                      (100 == lighter, 900 == bolder)
     </pre>
 
     <ul>
@@ -166,7 +166,7 @@
     <hr>
 
     <h3>
-        font-variant : 텍그트 문구를 작은 대문자로 변경할 때 사용
+        font-variant : 텍스트 문구를 작은 대문자로 변경할 때 사용
     </h3>
 
     <pre>
@@ -178,7 +178,7 @@
     </pre>
 
     <p>I LOVE YOU</p>
-    <p style="font-variant : small-caps">
+    <p style="font-variant : small-caps;">
         i love you
     </p>
 
@@ -203,11 +203,11 @@
     </pre>
 
     <!-- ul>li*3 + Enter -->
-     <ul>
-        <li style="font-style : normal">normal : 일반 글꼴</li>
+    <ul>
+        <li style="font-style : normal;">normal : 일반 글꼴</li>
         <li style="font-style : italic;">italic : 기울임 글꼴</li>
-        <li style="font-style: oblique;">oblique : 원래 글자를 기울인 셈</li>
-     </ul>
+        <li style="font-style : oblique;">oblique : 원래 글자를 기울인 셈</li>
+    </ul>
 
 </body>
 </html>

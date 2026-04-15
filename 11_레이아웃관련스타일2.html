@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃관련스타일2</title>
+    <title>레이아웃 관련 스타일 2</title>
     <style>
         /* 항상 부모요소가 기준점!! */
         .outer {
             /* border : 1px solid blue; */
             /* 작업용 가이드라인 */
 
-            position: relative;
-            /* 
-                항상 우선적으로 기준이 되는 부모 요소에 
+            position : relative;
+            /*
+                항상 우선적으로 기준이 되는 부모 요소에
                 position : relative; (상대위치) 로 기준점을 잡아줘서
                 그 안에 들어있는 자식 요소들에 대해 절대적인 배치가 가능하게 함
 
                 기준점은 항상 부모요소에 정확하게 잡고 시작해야 한다!!
                 만약 기준점을 바로 부모요소에 지정하지 않는다면
-                기준점이 자동으로 body 태그로 잡히게 된다
+                기준점이 자동으로 body 태그로 잡히게 된다!! (배치가 어그러짐!!)
             */
         }
 
@@ -30,16 +30,16 @@
             width : 300px;
             height : 300px;
             background-color : yellow;
-        } 
+        }
 
         #second {
             width : 200px;
             height : 200px;
-            background-color: yellowgreen;
+            background-color : yellowgreen;
 
-            position: absolute;
-            top: 50px;
-            left: 50px;
+            position : absolute;
+            top : 50px;
+            left : 50px;
             /*
                 이동할 자식요소를 부모 요소 기준으로 절대적인 위치로 옮길 수 있도록
                 position : absolute; (절대위치) 를 걸어 준 후
@@ -56,8 +56,8 @@
             width : 100px;
             height : 100px;
             background-color : red;
-            
-            position: absolute;
+
+            position : absolute;
             top : 100px;
             left : 100px;
         }
@@ -66,11 +66,11 @@
         .fixed-area {
             width : 100px;
             height : 100px;
-            background-color: red;
-            /* position: fixed; */
+            background-color : red;
+            /* position : fixed; */
             /*
                 주로 메뉴바를 상단에 고정하거나, 맨 위로 버튼 등을 고정시킬 때 쓰임!!
-                (배경 이미지 관련 속성 중 background-attatchment : fixed 와 같은 원리)
+                (배경 이미지 관련 속성 중 background-attachment : fixed 와 같은 원리)
             */
         }
 
@@ -79,7 +79,7 @@
             width : 150px;
             height : 100px;
             border : 1px solid black;
-            position: absolute;
+            position : absolute;
             /*
                 top : 0px;
                 left : 0px;
@@ -90,24 +90,24 @@
             background-color : yellow;
             top : 100px;
             left : 100px;
-            z-index: 333333;
+            z-index : 3333333;
         }
         #z2 {
-            background-color: green;
-            top: 50px;
-            left: 50px;
-            z-index: 999999999999999;
+            background-color : green;
+            top : 50px;
+            left : 50px;
+            z-index : 999999999999999;
             /*
-                동일 선상의 자손요소들 (position : absolute) 중에
+                동일 선상의 자손요소들 (position : absolute;) 중에
                 z-index 의 값을 단순히 비교하여 제일 큰 값을 가진 요소를
                 제일 위에 올려주는 원리!!
-                값이 몇이되든 상솬은 없음!!
-                단순히 크기만 봐서 더 위쪽ㄴ에 쌓일 것인가,
+                값이 몇이되든 상관은 없음!!
+                단순히 크기만 봐서 더 위쪽에 쌓일 것인가,
                 아래쪽에 쌓일 것인가를 판단함!!
             */
         }
         #z3 {
-            background-color: red;
+            background-color : red;
             z-index : 5;
         }
 
@@ -115,11 +115,11 @@
         .vis-test {
             width : 100px;
             height : 100px;
-            border: 1px solid black;
+            border : 1px solid black;
         }
 
         #vis {
-            /* visibility: hidden; */
+            /* visibility : hidden; */
             /*
                 요소가 눈에 안보여지게끔 숨김 처리
                 단, 공간은 여전히 차지함!!
@@ -129,19 +129,19 @@
             display : none;
             /*
                 요소가 안보여지게끔 숨김 처리
-                또한, 공간도 차지하지 않아서 감쪽같이
-                
+                또한, 공간도 차지하지 않아서 감쪽같이 숨길 수 있음!!
+
                 주로 서브메뉴바 숨김처리, 팝업창 숨김처리 때 많이 쓰임!!
             */
         }
 
         /* float */
         .float-test {
-            border: 1px solid black;
+            border : 1px solid black;
             width : 70px;
             height : 30px;
             float : right;
-            /* body 로부터 붕 띄워서 왼쪽 또는 오른쪽으로 차례대로 나열 */
+            /* body 로 부터 붕 띄워서 왼쪽 또는 오른쪽으로 차례대로 나열 */
         }
     </style>
 </head>
@@ -168,7 +168,7 @@
     <div class="positioning fixed-area"></div>
 
     <br><br>
-    
+
     <h3>z-index</h3>
 
     <p>
@@ -196,7 +196,7 @@
 
         그래서 그 아래에 새로운 요소들을 출력하고자 할 때
         자동으로 그 아래에 요소들이 출력되는 것이 아니라
-        공중부양 된 곳 자리에 body 영역에 딱 달라붙어서 출력되려고함!! wndml!!
+        공중부양 된 곳 자리에 body 영역에 딱 달라붙어서 출력되려고함!! 주의!!
     -->
 
     <h3>visibility</h3>
@@ -207,9 +207,9 @@
 
     <!-- div.vis-test[style=]*3 + Enter -->
 
-    <div class="vis-test" style="background-color: red;"></div>
-    <div id="vis" class="vis-test" style="background-color: green;"></div>
-    <div class="vis-test" style="background-color: yellow;"></div>
+    <div class="vis-test" style="background-color : red;"></div>
+    <div id="vis" class="vis-test" style="background-color : green;"></div>
+    <div class="vis-test" style="background-color : yellow;"></div>
 
     <br><br>
 
@@ -230,7 +230,7 @@
 
     <!--
         float 속성을 쓰게 되면 그 이후에 적힌 요소들이
-        중첩되서 계속 출력되기 때문에 float 속성을 헤제하고 넘어간다!!
+        중첩되서 계속 출력되기 때문에 float 속성을 해제하고 넘어간다!!
     -->
 
     <br clear="both">
